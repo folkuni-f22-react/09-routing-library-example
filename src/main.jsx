@@ -1,15 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { RouterProvider, createHashRouter } from 'react-router-dom'
-import Root from './routes/Root.jsx'
+import { RouterProvider } from 'react-router-dom'
 import './index.css'
-
-const router = createHashRouter([
-	{
-		path: '/',
-		element: <Root />
-	}
-])
+import { router } from './routeConfig.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 	<React.StrictMode>

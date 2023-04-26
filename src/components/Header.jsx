@@ -7,10 +7,10 @@ const Header = () => (
 		<nav>
 			<ul>
 				<li className="selected"> <NavLink to="/">Home</NavLink> </li>
-				<li> The toplist </li>
-				<li> Find a book </li>
-				<li> My favorites </li>
-				<li> Get a library card </li>
+				<li> <NavLink to="/toplist">The toplist</NavLink> </li>
+				<li> <NavLink to="/find-book">Find a book</NavLink> </li>
+				<li> <NavLink to="/favorites">My favorites</NavLink> </li>
+				<li> <NavLink to="/get-a-card">Get a library card</NavLink> </li>
 			</ul>
 		</nav>
 	</header>
