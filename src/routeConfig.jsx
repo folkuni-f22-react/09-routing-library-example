@@ -23,7 +23,8 @@ export const router = createHashRouter([
 			},
 			{
 				path: 'find-book',
-				element: <FindBook />
+				element: <FindBook />,
+				loader: booksLoader
 			},
 			{
 				path: 'favorites',
