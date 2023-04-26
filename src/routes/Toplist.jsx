@@ -1,5 +1,6 @@
 import { useLoaderData } from 'react-router-dom'
 import { data } from '../data/books.js'
+import ViewBook from '../components/ViewBook.jsx'
 
 export const loader = () => data
 
@@ -7,25 +8,20 @@ const Toplist = () => {
 	const books = useLoaderData()
 	console.log('Toplist books=', books)
 	
-	const addToFavorites = book => {
-		console.log('Toplist: add book to favorites. book=', book)
-	}
-	
+
 	return (
 		<div className="content">
 			<h2> The toplist </h2>
 			<p>Most searched for books right now!</p>
 			<ol>
 				{books.map(book => (
-					<li key={book.id}>
-						{book.title}, {book.author}
-						<button onClick={() => addToFavorites(book)}> ❤️ Add to favorites </button>
-					</li>
+					<ViewBook key={book.id} book={book} />
 				))}
 			</ol>
 		</div>
 	)
 }
+
 
 // <li> The Great Gatsby, F. Scott Fitzgerald <button> ❤️ Add to favorites </button> </li>
 // <li> The Great Gatsby, F. Scott Fitzgerald <button> ❤️ Add to favorites </button> </li>
