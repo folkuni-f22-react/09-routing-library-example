@@ -29,20 +29,15 @@ header h1 {
 	text-align: center;
 }
 
-header nav ul {
-	list-style-type: none;
+header nav {
+	/* list-style-type: none; */
 	padding: 0;
 	display: flex;
 	flex-direction: row;
-	/* 	border-collapse: collapse; */
 }
 
-header nav ul:hover {
-	/* 	border-color: black;
-	border: 1px solid black; */
-}
 
-header nav li {
+header nav a {
 	padding: 0.5em 1em;
 	border: 2px solid orange;
 	border-right: none;
@@ -56,19 +51,19 @@ header nav li {
 	/* 	box-shadow: 0em 0em 0.3em gray; */
 }
 
-header nav li:hover,
-header nav li.selected {
+header nav a:hover,
+header nav a.active {
 	background-color: orange;
 	cursor: pointer;
 	transform: translateY(-0.4em);
 	box-shadow: 0em 0.4em 0.3em gray;
 }
 
-header nav li:first-child {
+header nav a:first-child {
 	border-radius: 1em 0 0 1em;
 }
 
-header nav li:last-child {
+header nav a:last-child {
 	border-radius: 0 1em 1em 0;
 	border-right: 2px solid orange;
 }
